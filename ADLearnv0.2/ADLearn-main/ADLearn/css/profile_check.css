@@ -70,10 +70,17 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 150px;
-    height: 160px;
+    justify-content: center; /* Center content vertically */
+    width: auto; /* Allow the width to adjust dynamically */
+    min-width: 150px; /* Ensure it doesn't shrink below this size */
+    max-width: 400px; /* Set a maximum width to avoid excessive stretching */
+    height: auto; /* Allow height to adjust based on content */
     margin-bottom: 10px;
+    box-sizing: border-box; /* Include padding in the size calculation */
+    word-wrap: break-word; /* Ensure content wraps instead of overflowing */
+    text-align: center; /* Center text within the box */
 }
+
 
 .profile-circle {
     background-color: white;
@@ -117,6 +124,7 @@ body {
     font-size: 18px; /* Slightly reduce font size for better readability */
     margin: 0;
     padding: 10px 0;
+    word-break: break-word;
 }
 
 .additional-box ul {
@@ -187,3 +195,4 @@ body {
     background-color: #dc3545;
     color: white;
 }
+
